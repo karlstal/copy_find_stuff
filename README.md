@@ -1,4 +1,4 @@
-#Copy Find stuff
+# Copy Find stuff
 
 ## Disclaimer
 The connector part of this script have not been tested and added to push_all.py or dump_all.py. Please do, before using it!
