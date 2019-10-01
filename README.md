@@ -1,4 +1,5 @@
 # Copy Find stuff
+A script for copying editorial autocomplete, connector configurations, editorial didyoumean, synonyms and unified weights from one index to another.
 
 ## Disclaimer
 The connector part of this script have not been tested and added to push_all.py or dump_all.py. Please do, before using it!
