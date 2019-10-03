@@ -24,7 +24,7 @@ def main():
     }
     settings = {k: v for k, v in settings.items() if v is not None and len(v) != 0 and k in actions}
     for k, v in settings.items():
-        print("Uploading {0}.".format(k))
+        print("Counting {0} entries for {1}. Uploading..".format(str(len(v)), k))
         actions[k](v, client_url)
     print("\nAll uploads finished!\n")
 
