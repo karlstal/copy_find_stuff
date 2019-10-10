@@ -76,7 +76,7 @@ def get_connectors(client_url):
             'type': hit['type'],
             'configuration': configuration,
             'name': hit['name'],
-            'channel': 'system!web'
+            'channel': hit['channel']
         })
     return connectors
 
