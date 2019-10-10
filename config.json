@@ -1,1 +1,1 @@
-{"client_url": "https:<PROXY_URL>/<PRIVATE_KEY>/<INDEX_NAME>/", "time": "1561360096.23"}
+{"old_index_client_url":"https:<PROXY_URL>/<PRIVATE_KEY_1>/<INDEX_NAME_1>/","new_index_client_url":"https:<PROXY_URL>/<PRIVATE_KEY_2>/<INDEX_NAME_2>/","time":"1561360096.23"}

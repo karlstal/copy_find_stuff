@@ -11,7 +11,7 @@ CONFIGURATION_FILE = 'config.json'
 def main():
     print("\nDownloading settings..")
     config = read_config()
-    client_url = config['client_url']
+    client_url = config['old_index_client_url']
     settings = {}
     settings['autocomplete'] = get_autocomplete(client_url)
     settings['connectors'] = get_connectors(client_url)

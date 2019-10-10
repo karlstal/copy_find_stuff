@@ -12,7 +12,7 @@ CONFIGURATION_FILE = 'config.json'
 def main():
     print("\nStarting uploads.\n")
     config = read_config()
-    client_url = config['client_url']
+    client_url = config['new_index_client_url']
 
     with open("downloaded_{0}.json".format(config['time'])) as f:
         settings = json.load(f)
