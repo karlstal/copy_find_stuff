@@ -12,7 +12,16 @@ Requests (`pip install requests`)
 
 ## Usage
 Should work with python >= 2.7
-1. Add a client_url on the form *https://<PROXY_URL>/<PRIVATE_KEY>/<INDEX_NAME>/* in **config.json**
-  Run **dump_all.py** to download all data
-2. Change the client_url to the new index
-  Run **push_all.py**
+The script uses a config file (**config.json**) that looks like this:
+```javascript
+{
+	"old_index_client_url": "https:<PROXY_URL>/<PRIVATE_KEY_1>/<INDEX_NAME_1>/", // This is from where the settings will be copied.
+	"new_index_client_url": "https:<PROXY_URL>/<PRIVATE_KEY_2>/<INDEX_NAME_2>/", // This is where the settings will be copied to.
+	"time": "1561360096.23" // Don't touch this
+}
+```
+
+1. Edit **config.json** as descripbed above.
+2. Run **dump_all.py** to download all data.
+3. Do a (manual) sanity check on the generated file *downloaded_<TIMESTAMP>.json* so it seems that all settings has been downloaded.
+4. Run **push_all.py**
