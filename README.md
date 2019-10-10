@@ -11,7 +11,7 @@ Requests (`pip install requests`)
 
 
 ## Usage
-Should work with python >= 2.7
+Should work with python >= 2.7.
 The script uses a config file (**config.json**) that looks like this:
 ```javascript
 {
@@ -21,7 +21,7 @@ The script uses a config file (**config.json**) that looks like this:
 }
 ```
 
-1. Edit **config.json** as descripbed above.
+1. Edit **config.json** as described above.
 2. Run **dump_all.py** to download all data.
-3. Do a (manual) sanity check on the generated file *downloaded_<TIMESTAMP>.json* so it seems that all settings has been downloaded.
+3. Do a (manual) sanity check on the generated file *downloaded_<TIMESTAMP>.json* and validate that the settings has been downloaded ok.
 4. Run **push_all.py**
