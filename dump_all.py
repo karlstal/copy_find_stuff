@@ -40,7 +40,11 @@ def read_config():
 def make_req(client_url, path, args=None):
     req_url = client_url.strip('/') + '/' + path
     result = requests.get(req_url, params=args)
-    if result.status_code != 200:
+    if result.status_code == 429:
+        print ("Got a 429. Sleeping 2s and retry")
+        time.sleep(2)
+        return make_req(client_url, path, args)
+    elif result.status_code != 200:
         sys.exit("Error: Something went wrong when trying to GET '{0}'. Find returned status code {1}.".format(
             path,
             str(result.status_code)
