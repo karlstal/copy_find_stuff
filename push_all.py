@@ -38,7 +38,13 @@ def read_config():
 def make_req(client_url, path, payload):
     req_url = client_url.strip('/') + '/' + path
     response = requests.post(req_url, json=payload)
-    if response.status_code not in [200, 201]:
+    if response.status_code == 429:
+        print ("Got a 429. Sleeping 2s and retry")
+        time.sleep(2)
+    # Ugly hack to not die on synonym conflicts.
+    elif response.status_code == 409 and "synonym" in req_url:
+        print ("A synonym was already in the index. Skipping it. (you should subtract this from the totals :) )")
+    elif response.status_code not in [200, 201]:
         sys.exit("Error: GET to {0} returned status code {1}.".format(
             path,
             str(response.status_code)
